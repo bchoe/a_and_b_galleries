@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "bryanchoe",
-    "password": null,
+    "username": "gallery_admin",
+    "password": "1234",
     "database": "a_and_b_galleries",
     "host": "127.0.0.1",
     "dialect": "postgres"
