@@ -149,3 +149,4 @@ $ npm start
 ```
 
 After the server starts, `db.sequelize.sync` is invoked, this will automatically synchronize your application with the database. If all goes well your server should have a bunch of SQL queries that will create all of your tables for you!
+
