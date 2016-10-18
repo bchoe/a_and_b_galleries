@@ -21,7 +21,7 @@ app.get('/gallery', (req,res) => {
   });
 });
 
-app.post ('/tasks', (req,res) => {
+app.post ('/pictures', (req,res) => {
   Task.create({title: req.body.title})
   .then((data) => {
     res.json(data);
