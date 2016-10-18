@@ -1,0 +1,7 @@
+mixin userGalleryList(users)
+  each User in users
+    div.userBorder
+      li#user #{User.author}
+      li#user #{User.link}
+      li#user #{User.description}
+    br

@@ -2,6 +2,11 @@ var express = require('express');
 const bodyParser = require('body-parser');
 var app = express();
 const pug = require('pug');
+//set template engine to use Pug
+app.set('view engine','pug');
+
+//tell express where our template files live
+app.set('views','./templates');
 
 
 
@@ -10,10 +15,16 @@ var db = require('./models');
 const User = db.User;
 const Photo = db.Photo;
 
-app.get('/gallery', (req,res) => {
-  User.findAll()
-  .then((users) => {
-    res.json(users);
+// app.get('/gallery', (req,res) => {
+//   User.findAll()
+//   .then((users) => {
+//     res.json(users);
+//   });
+// })
+app.get('/gallery',(req,res)=>{
+  Photo.findAll
+  res.render('index',{
+    page: 'home'
   });
 })
 
@@ -31,6 +42,11 @@ app.post('/gallery/new', (req,res) => {
     res.json(data);
   });
 });
+app.get('gallery/new',(req,res)=>{
+  res.render('new',{
+    page: 'home'
+  });
+})
 app.post('/gallery', (req,res)=>{
 
 })
@@ -45,9 +61,6 @@ app.put('/users/:id', (req,res)=>{
 
 app.delete('/users:id',(req,res)=>{
  User.findById(req.params.id)
-    user.destroy();
- .then(user => {
-  })
  .then(done => {
     res.json({success:true});
  });
