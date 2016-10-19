@@ -1,21 +1,36 @@
 extends ./layout.pug
-include ./mixin.pug
+include ./mixins.pug
 block title
   title Edit
 block body
+  div.titleDiv
+    h1 A and B Galleries
+    div#featuredPicture
+      img.editPic(src=data.link)
 
-  if page == 'home'
-    h1 Edit photo
-    form(action='#' method='post').editForm
-      p author
-      p #{edit}
-      input(name="author" placeholder= product.name).editAuthor
-      p link
-      input(name="link" placeholder=product.price).editLink
-      p description
-      input(name="description" placeholder= product.inventory).editDescription
-      br
-      button.button POST
-      button
-        a(href="/gallery") HOME
+  button
+    a(href="/gallery/new") Add A Post
+
+
+
+
+
+
+
+
+
+  //- if page == 'home'
+  //-   h1 Edit photo
+  //-   form(action='#' method='post').editForm
+  //-     p author
+  //-     p #{edit}
+  //-     input(name="author" placeholder= product.name).editAuthor
+  //-     p link
+  //-     input(name="link" placeholder=product.price).editLink
+  //-     p description
+  //-     input(name="description" placeholder= product.inventory).editDescription
+  //-     br
+  //-     button.button POST
+  //-     button
+  //-       a(href="/gallery") HOME
 

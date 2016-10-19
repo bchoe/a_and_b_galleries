@@ -60,16 +60,24 @@ app.put('/gallery/:id', (req,res)=>{
 
 //edit page
 app.get('/gallery/:id/edit',(req,res)=>{
-
-})
+  Photo.findById(req.params.id)
+  .then((data) => {
+    console.log(data)
+    res.render('edit',{
+     data: data.dataValues
+    })
+  });
+});
 
 //get one specificially (detail page)
-app.get('/gallery/:id', (req,res)=>{
-  User.findById(req.params.id)
-  .then((users) => {
-    res.json(users);
-  });
-})
+// app.get('/gallery/:id', (req,res)=>{
+//   Photo.findById(req.params.id)
+//   .then((data) => {
+//     res.render('edit',{
+//       data
+//     })
+//   });
+// })
 
 //delete one specificially
 app.delete('/gallery:id',(req,res)=>{
