@@ -1,5 +1,43 @@
 $dark-color : #333333;
 
 body {
+  padding-left: 100px;
   background: $dark-color;
+}
+
+.userGallery{
+  display:flex;
+  flex-flow:row wrap;
+}
+
+#featuredPicture{
+  display: flex;
+  justify-content: center;
+
+  width:1200px;
+  .mainPic{
+    height:auto;
+    width:100%;
+
+  }
+}
+
+.userBorder{
+  background-color: lightgray;
+  padding:30px;
+  margin:30px;
+}
+
+img{
+  // display:flex;
+  // justify-content: space-around;
+  flex: 0 0 30%;
+  width: 500px;
+  height: 270px;
+  vertical-align: center;
+}
+
+h1{
+  color: blue;
+
 }

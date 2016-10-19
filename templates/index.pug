@@ -4,20 +4,12 @@ block title
   title A and B galleries
 
 block body
-  if page == 'home'
-    div.titleDiv
-      h1 Gallery
-    ul.userGallery
-      //- +userGalleryList(result)
-    button
-        a(href="/gallery/new") Add a product
-    //- button
-    //-   a(href="/articles/new") Add an Article
-  //- else
-  //-   h1 Articles
-  //-   ul.products
-  //-     +articleList(result)
-  //-   button
-  //-     a(href="/articles/new") Add an Article
-  //-   button
-  //-       a(href="/products/new") Add a product
+  div.titleDiv
+    h1 Gallery
+    div#featuredPicture
+      img.mainPic(src=one.link)
+  div.userGallery
+    //- +div(data)
+    +userGalleryList(data)
+  button
+    a(href="/gallery/new") Add a product

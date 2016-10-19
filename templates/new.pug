@@ -1,38 +1,21 @@
 extends ./layout.pug
-include ./mixin.pug
+include ./mixins.pug
 block title
   title Edit
 
 block body
-  if page == 'home'
-    h1 Add photo
-    form(action='#' method='post').editForm
-      p author
-      p #{edit}
-      input(name="name").editAuthor
-      p link
-      input(name="link").editLink
-      p description
-      input(name="inventory").editDescription
-      br
-      button.button POST
-      //- button
-      //-   a(href="/articles/new") Add an Article
-      button
-        a(href="/gallery") HOME
-  //- else
-  //-   h1 Add Articles
-  //-   form(action='#' method='post').editForm
-  //-     p Title
-  //-     p #{edit}
-  //-     input(name="title").editName
-  //-     p Body
-  //-     input(name="body").editPrice
-  //-     p Author
-  //-     input(name="author").editInventory
-  //-     br
-  //-     button.button POST
-  //-     button
-  //-       a(href="/products/new") add a Product
-  //-     button
-  //-       a(href="/articles") HOME
+  h1 Add photo
+  form(action='#' method='post').editForm
+    p author
+    p #{edit}
+    input(name="name").editAuthor
+    p link
+    input(name="link").editLink
+    p description
+    input(name="inventory").editDescription
+    br
+    button.button POST
+    //- button
+    //-   a(href="/articles/new") Add an Article
+    button
+      a(href="/gallery") HOME

@@ -1,2 +1,29 @@
 body {
+  padding-left: 100px;
   background: #333333; }
+
+.userGallery {
+  display: flex;
+  flex-flow: row wrap; }
+
+#featuredPicture {
+  display: flex;
+  justify-content: center;
+  width: 1200px; }
+  #featuredPicture .mainPic {
+    height: auto;
+    width: 100%; }
+
+.userBorder {
+  background-color: lightgray;
+  padding: 30px;
+  margin: 30px; }
+
+img {
+  flex: 0 0 30%;
+  width: 500px;
+  height: 270px;
+  vertical-align: center; }
+
+h1 {
+  color: blue; }
