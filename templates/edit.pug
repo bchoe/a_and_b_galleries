@@ -7,6 +7,17 @@ block body
     h1 A and B Galleries
     div#featuredPicture
       img.editPic(src=data.link)
+    form(action='#' method='post').editForm
+      p author
+      p #{edit}
+      input(name="author" placeholder= data.author).editAuthor
+      p link
+      input(name="link" placeholder=data.link).editLink
+      p description
+      input(name="description" placeholder= data.description).editDescription
+      br
+      button.button POST
+        a(href="/gallery")
 
   button
     a(href="/gallery/new") Add A Post
@@ -19,18 +30,4 @@ block body
 
 
 
-  //- if page == 'home'
-  //-   h1 Edit photo
-  //-   form(action='#' method='post').editForm
-  //-     p author
-  //-     p #{edit}
-  //-     input(name="author" placeholder= product.name).editAuthor
-  //-     p link
-  //-     input(name="link" placeholder=product.price).editLink
-  //-     p description
-  //-     input(name="description" placeholder= product.inventory).editDescription
-  //-     br
-  //-     button.button POST
-  //-     button
-  //-       a(href="/gallery") HOME
 
