@@ -4,6 +4,8 @@ block title
   title A and B galleries
 
 block body
+  button
+    a(href="/gallery/new") Add Photo
   div.titleDiv
     h1 Gallery
     div#featuredPicture
@@ -11,6 +13,5 @@ block body
   div.userGallery
     //- +div(data)
     +userGalleryList(data)
-  button
-    a(href="/gallery/new") Add a product
+
 
