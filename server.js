@@ -137,68 +137,68 @@ app.listen(3000, function() {
 // authentication##########
 
 
-// //use local strategy - this checks out database in
-// //order to authenticate our users
-// passport.use(new LocalStrategy((username, password, done)=>{
-//   const {USERNAME, PASSWORD} = CONFIG.CREDENTIALS;
+//use local strategy - this checks out database in
+//order to authenticate our users
+passport.use(new LocalStrategy((username, password, done)=>{
+  const {USERNAME, PASSWORD} = CONFIG.CREDENTIALS;
 
-//   const isAuthenticated = (username === USERNAME && password === PASSWORD);
+  const isAuthenticated = (username === USERNAME && password === PASSWORD);
 
-//   if(!isAuthenticated){// not authenticated
-//     return done(null, false);// no error not credentials do not match
-//   }
-
-
-
-//     //were authenticated
-//     //
-//     const user = {
-//       name: "aaron",
-//       role: "admin",
-//       favColor:'blue'
-//     }
-//     return done(null,user);
-// }))
-
-// //In order of persistant serssion to work- you must serialize
-// //the user to the request and then deserialize subsequent requests
-// passport.serializeUser((user,done)=>{
-//   //user is passed in from local stragery
-//   //user is attached to the req.user
-//   return done(null,user)
-// });
-
-// passport.deserializeUser((user,done)=>{
-//   return done(null,user);
-// })
-
-// const isAuthenticated = (req, res, next)=>{
-//   if(!req.isAuthenticated()){
-//     return res.redirect('/login');
-//   }
-//   return next();
-// }
-
-// app.get('/login', (req,res)=>{
-//   res.render('login');
-// })
-
-// app.post('/login', passport.authenticate('local',{
-//   successRedirect:'/secret',
-//   failureRedirect:'/login'
-// }))
-
-// app.get('/secret', isAuthenticated, (req,res)=>{
-//   res.render('secret');
-// })
-
-// app.get('/logout',(req,res)=>{
-//   req.logout();
-//   res.redirect('/login')
-// })
+  if(!isAuthenticated){// not authenticated
+    return done(null, false);// no error not credentials do not match
+  }
 
 
-// const server = app.listen(PORT,()=>{
-//   console.log(`Server listening on ${PORT}`);
 
-// });
+    //were authenticated
+    //
+    const user = {
+      name: "aaron",
+      role: "admin",
+      favColor:'blue'
+    }
+    return done(null,user);
+}))
+
+//In order of persistant serssion to work- you must serialize
+//the user to the request and then deserialize subsequent requests
+passport.serializeUser((user,done)=>{
+  //user is passed in from local stragery
+  //user is attached to the req.user
+  return done(null,user)
+});
+
+passport.deserializeUser((user,done)=>{
+  return done(null,user);
+})
+
+const isAuthenticated = (req, res, next)=>{
+  if(!req.isAuthenticated()){
+    return res.redirect('/login');
+  }
+  return next();
+}
+
+app.get('/login', (req,res)=>{
+  res.render('login');
+})
+
+app.post('/login', passport.authenticate('local',{
+  successRedirect:'/secret',
+  failureRedirect:'/login'
+}))
+
+app.get('/secret', isAuthenticated, (req,res)=>{
+  res.render('secret');
+})
+
+app.get('/logout',(req,res)=>{
+  req.logout();
+  res.redirect('/login')
+})
+
+
+const server = app.listen(PORT,()=>{
+  console.log(`Server listening on ${PORT}`);
+
+});
