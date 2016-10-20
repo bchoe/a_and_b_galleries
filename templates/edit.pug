@@ -5,8 +5,9 @@ block title
 block body
   div.titleDiv
     h1 A and B Galleries
-    div#featuredPicture
+    div#featuredPictureEdit
       img.editPic(src=data.link)
+
     form(action='#' method='post').editForm
       p author
       p #{edit}
@@ -18,16 +19,11 @@ block body
       br
       button.button POST
         a(href="/gallery")
+        button
+          a(href="/gallery/new") Add a new post
 
-  button
-    a(href="/gallery/new") Add A Post
-
-
-
-
-
-
-
-
+      form(method="POST" action=`/gallery/${data.id}` enctype="application/x-www-form-urlencoded")
+        input(type="hidden" name="_method" value="DELETE")
+        button(type="submit") Delete
 
 

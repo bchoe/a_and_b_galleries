@@ -1,31 +1,94 @@
 $dark-color : #333333;
-
+$light-color: #FFF;
 body {
-  padding-left: 100px;
-  background: $dark-color;
+  //padding-left: 100px;
+  background: $light-color;
+  font-family: 'Kaushan Script', cursive;
+//  text-align: center;
 }
+
 
 .userGallery{
   display:flex;
   flex-flow:row wrap;
 }
 
+.editForm{
+  // text-align: center;
+
+}
+
+.titleDiv{
+  text-align: center;
+}
+
 #featuredPicture{
   display: flex;
   justify-content: center;
-
+  // text-align: center;
   width:1200px;
-  .mainPic{
+  .mainPic,{
     height:50%;
     width:75%;
-
+    text-align: center;
   }
 }
 
+
+
+
+.inputBodyHolder{
+display: flex;
+  justify-content: center;
+  background-image: url('http://vinilavinilos.com/267/banksy-nina-corazon.jpg');
+  background-size: 400px;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  height:520px;
+}
+
+
+.newInputBody{
+width:300px;
+padding-left: 110px;
+}
+
+
+.editForm{
+  text-align: center;
+  // display: inline-block;
+
+}
+
+.editAuthor, .editLink, .editDescription{
+width: 200px;
+background-color: lightgray;
+}
+
+.editAuthor:hover, .editLink:hover, .editDescription:hover{
+width: 300px;
+background-color: white;
+}
+
+.editPic{
+  width: 30%;
+  height: 30%;
+}
+
+.user{
+
+  filter: grayscale(100%) blur(1px) ;
+}
+
+.user:hover{
+  filter: grayscale(0%);
+}
+
+
 .userBorder{
-  background-color: lightgray;
-  padding:20px;
-  margin:20px;
+  background-color: black;
+  padding:10px;
+  margin:15px;
 }
 
 img{
@@ -35,9 +98,33 @@ img{
   width: 300px;
   height: 170px;
   vertical-align: center;
+
+
 }
 
 h1{
-  color: white;
-  font-size: 100px;
+
+  color: black;
+  font-size: 70px;
+  // display: flex;
+  // justify-content: center;
+
+}
+
+h2{
+
+  color:black;
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+
+}
+button{
+  background: #444;
+  width:90px;
+  height:20px;
+  border:1px solid #333;
+  border-radius:10px;
+  display: flex;
+  justify-content: space-around;
 }

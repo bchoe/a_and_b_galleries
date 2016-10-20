@@ -4,18 +4,20 @@ block title
   title Edit
 
 block body
-  h1 Add photo
-  form(action='#' method='post').editForm
-    p author
-    p #{edit}
-    input(name="name").editAuthor
-    p link
-    input(name="link").editLink
-    p description
-    input(name="inventory").editDescription
-    br
-    button.button POST
-    //- button
-    //-   a(href="/articles/new") Add an Article
-    button
-      a(href="/gallery") HOME
+  div.inputBodyHolder
+    div.newInputBody
+      h1 Add photo
+      form(action='#' method='post').editForm
+        p author
+        p #{edit}
+        input(name="name").editAuthor
+        p link
+        input(name="link").editLink
+        p description
+        input(name="inventory").editDescription
+        br
+        button.button POST
+        //- button
+        //-   a(href="/articles/new") Add an Article
+        button
+          a(href="/gallery") HOME

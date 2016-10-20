@@ -1,9 +1,16 @@
 mixin userGalleryList(users)
-  //- div
-  //-   img.mainImage(src=one.link)
+  div
+    img.mainImage(src=one.link)
   each User in users
     div.userBorder
       img.user(src=User.link)
       div.user #{User.author}
       div.user #{User.description}
     br
+
+
+  //- div.carousel
+  //-   div your content
+  //-   div your content
+  //-   div your content
+  //-   div your content
