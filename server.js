@@ -17,7 +17,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(methodOverride((req, res) => {
  if (req.body && typeof req.body === 'object' && '_method' in req.body) {
-
    var method = req.body._method;
    delete req.body._method;
    return method;
@@ -35,14 +34,14 @@ const isAuthenticated = (req, res, next) => {
   return next();
 };
 
-app.get('/gallery', (req,res) => {
+app.get('/gallery', isAuthenticated,(req,res) => {
   Photo.findAll()
   .then((data) => {
     let one = data.slice(data.length-1)[0];
     res.render('index',{
       data,
       one
-    })
+    });
   });
 });
 
@@ -59,7 +58,7 @@ app.post('/gallery/new', (req,res) => {
   });
 });
 
-app.get('/gallery/new', isAuthenticated,(req,res) => {
+app.get('/gallery/new', /*isAuthenticated,*/(req,res) => {
   res.render('new',{
       });
 });
@@ -99,10 +98,8 @@ app.delete('/gallery/:id',(req,res) => {
     }
   })
    .then(data => {
-    console.log(data);
       res.json({success:true});
     });
-
 });
 
 passport.use(new LocalStrategy((username, password, done) =>  {
@@ -112,7 +109,6 @@ passport.use(new LocalStrategy((username, password, done) =>  {
     }
   })
   .then(user => {
-
   const isAuthenticated = (username === user.username && password === user.password);
     if(isAuthenticated){
       console.log("found user")
@@ -121,13 +117,10 @@ passport.use(new LocalStrategy((username, password, done) =>  {
       console.log("didnt find user")
       return done(null, false);
     }
-
   })
   .catch(err => {
     return done('user not found', false);
-    console.log("error#######",err);
   });
-
 }));
 
 passport.serializeUser((user, done) => {
@@ -144,7 +137,7 @@ app.get('/login', (req,res) => {
 
 app.post('/login', passport.authenticate('local',{
   successRedirect:'/gallery',
-  failureRedirect:'/gallery/login'
+  failureRedirect:'/login'
 }));
 
 
@@ -168,12 +161,6 @@ app.post('/create',(req,res) => {
   })
   .then((data) => {
   });
-});
-
-
-app.get('/gallery', isAuthenticated, (req,res) => {
-
-  res.render('index');
 });
 
 app.get('/logout',(req,res) => {
