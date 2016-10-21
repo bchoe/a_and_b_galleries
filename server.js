@@ -56,9 +56,6 @@ app.post('/gallery/new', (req,res) => {
     description:req.body.description
   })
   .then((data) => {
-   res.render('new',{
-      data
-    });
   })
   .catch((err) => {
     console.error('error');
@@ -67,7 +64,7 @@ app.post('/gallery/new', (req,res) => {
 
 app.get('/gallery/new', isAuthenticated,(req,res) => {
   res.render('new',{
-      });
+  });
 });
 
 app.post('/gallery', (req,res) => {
