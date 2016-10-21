@@ -7,14 +7,14 @@ block body
   div.inputBodyHolder
     div.newInputBody
       h1 Add photo
-      form(action='#' method='post').editForm
+      form.editForm(action='#' method='post')
         p author
         p #{edit}
-        input(name="name").editAuthor
+        input.editAuthor(name="name")
         p link
-        input(name="link").editLink
+        input.editLink(name="link")
         p description
-        input(name="inventory").editDescription
+        input.editDescription(name="inventory")
         br
         button.button POST
         //- button
