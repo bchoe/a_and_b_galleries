@@ -22,7 +22,7 @@ block body
         button
           a(href="/gallery/new") Add a photo
 
-      form(method="POST" action=`/gallery/${data.id}` enctype="application/x-www-form-urlencoded")
+      form(method="POST" action='/gallery/#{data.id}' enctype="application/x-www-form-urlencoded")
         input(type="hidden" name="_method" value="DELETE")
         button(type="submit") Delete
 
