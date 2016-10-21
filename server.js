@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const session = require('express-session');
+const RedisStore = require('connect-redis')(session);
 const pug = require('pug');
 const methodOverride = require('method-override');
 
@@ -13,11 +14,19 @@ app.set('views', './templates');
 
 app.use(express.static('./public'));
 app.use(bodyParser.urlencoded({extended:true}));
+
+app.use(session({
+  store: new RedisStore(),
+  secret: CONFIG.SECRET,
+  resave: false,
+  saveUninitialized: true
+}));
+
 app.use(passport.initialize());
 app.use(passport.session());
+
 app.use(methodOverride((req, res) => {
  if (req.body && typeof req.body === 'object' && '_method' in req.body) {
-
    var method = req.body._method;
    delete req.body._method;
    return method;
