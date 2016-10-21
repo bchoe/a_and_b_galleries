@@ -42,7 +42,10 @@ app.get('/gallery', (req,res) => {
     res.render('index',{
       data,
       one
-    })
+    });
+  })
+  .catch((err) => {
+    console.error('error');
   });
 });
 
@@ -56,6 +59,9 @@ app.post('/gallery/new', (req,res) => {
    res.render('new',{
       data
     });
+  })
+  .catch((err) => {
+    console.error('error');
   });
 });
 
@@ -78,6 +84,9 @@ app.get('/gallery/:id/edit', isAuthenticated,(req,res)=>{
     res.render('edit', {
       data: data.dataValues
     });
+  })
+  .catch((err) => {
+    console.error('error');
   });
 });
 
@@ -89,6 +98,9 @@ app.post('/gallery/:id/edit',(req,res)=>{
       link:req.body.link,
       description:req.body.description
     });
+  })
+  .catch((err) => {
+    console.error('error');
   });
 });
 
@@ -98,10 +110,13 @@ app.delete('/gallery/:id',(req,res) => {
       id: req.params.id
     }
   })
-   .then(data => {
+  .then(data => {
     console.log(data);
       res.json({success:true});
-    });
+  })
+  .catch((err) => {
+  console.error('error');
+  });
 
 });
 
@@ -112,16 +127,12 @@ passport.use(new LocalStrategy((username, password, done) =>  {
     }
   })
   .then(user => {
-
   const isAuthenticated = (username === user.username && password === user.password);
     if(isAuthenticated){
-      console.log("found user")
       return done(null, user);
     } else {
-      console.log("didnt find user")
       return done(null, false);
     }
-
   })
   .catch(err => {
     return done('user not found', false);
@@ -144,45 +155,48 @@ app.get('/login', (req,res) => {
 
 app.post('/login', passport.authenticate('local',{
   successRedirect:'/gallery',
-  failureRedirect:'/gallery/login'
+  failureRedirect:'/login'
 }));
 
-
-app.post('/gallery/new', (req,res) => {
+/*app.post('/gallery/new', (req,res) => {
   User.create({
     username:req.body.username,
     password:req.body.password,
   })
   .then((data) => {
+  })
+  .catch((err) => {
+    console.error('error');
   });
-});
+});*/
 
 app.get('/create', (req,res) => {
   res.render('create');
 });
 
-app.post('/create',(req,res) => {
+app.post('/create', (req,res) => {
   User.create({
     username: req.body.username,
     password: req.body.password
   })
   .then((data) => {
+  })
+  .catch((err) => {
+    console.error('error');
   });
 });
 
 
 app.get('/gallery', isAuthenticated, (req,res) => {
-
   res.render('index');
 });
 
-app.get('/logout',(req,res) => {
+app.get('/logout',function(req,res){
   req.logout();
   res.redirect('/login');
 });
 
-app.listen(3000, () => {
+app.listen(3000, function(){
   console.log('server started');
   db.sequelize.sync();
-
 });
