@@ -3,7 +3,15 @@ include ./mixins.pug
 block title
   title Create New User
 block body
-  form(method="POST" action="create")
-    input(type="text" name="username" placeholder="username")
-    input(type="password" name="password" placeholder="password")
-    button(type="submit") Create
+  div.inputBodyHolder
+    div.newInputBody
+      div.createFormDiv
+        h1 Sign Up
+        form(method="POST" action="create")
+          input(type="text" name="username" placeholder="username").loginUser
+          br
+          input(type="password" name="password" placeholder="password").loginUser
+          br
+          input(type="password" name="Profile Picture" placeholder="profile picture url").loginUser
+          br
+          button(type="submit") Create

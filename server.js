@@ -72,7 +72,7 @@ app.post('/gallery/new', (req,res) => {
   });
 });
 
-app.get('/gallery/new', /*isAuthenticated,*/(req,res) => {
+app.get('/gallery/new', isAuthenticated,(req,res) => {
   res.render('new',{
   });
 });
