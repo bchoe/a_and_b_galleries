@@ -8,14 +8,14 @@ block body
     div#featuredPictureEdit
       img.editPic(src=data.link)
 
-    form(action='#' method='post').editForm
+    form.editForm(action='#' method='post')
       p author
       p #{edit}
-      input(name="author" placeholder= data.author).editAuthor
+      input.editAuthor(name="author" placeholder= data.author)
       p link
-      input(name="link" placeholder=data.link).editLink
+      input.editLink(name="link" placeholder=data.link)
       p description
-      input(name="description" placeholder= data.description).editDescription
+      input.editDescription(name="description" placeholder= data.description)
       br
       button.button POST
         a(href="/gallery")
