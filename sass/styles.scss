@@ -38,23 +38,43 @@ body {
 
 
 .inputBodyHolder{
-display: flex;
+  display: flex;
   justify-content: center;
-  background-image: url('http://vinilavinilos.com/267/banksy-nina-corazon.jpg');
-  background-size: 400px;
-  background-position: bottom center;
+  background-image: url('http://www.desktopimages.org/preview/get_photo/73659/1280/800');
+  //background-image: url('/css/girlcamera.jpg');
+
   background-repeat: no-repeat;
-  height:520px;
+  width:1200px;
+}
+
+.loginUser, .loginPassword{
+  font-size: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width:300px;
+  height:35px;
 }
 
 
+
 .newInputBody{
-width:300px;
-padding-left: 110px;
+  margin:200px 300px 300px 300px;
+  width:300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.formDiv{
+border-radius: 25px;
+background-color: gray;
+background: rgba(255,255,255,0.5);
+height: 400px;
 }
 
 
 .editForm{
+  height:600px;
   text-align: center;
   // display: inline-block;
 
@@ -103,11 +123,12 @@ img{
 }
 
 h1{
-
+  text-align: center;
   color: black;
   font-size: 70px;
   // display: flex;
   // justify-content: center;
+
 
 }
 
@@ -120,49 +141,19 @@ h2{
 
 }
 button{
-  background: #444;
-  width:90px;
-  height:20px;
+  margin-bottom: 20px;
+  background: white;
+  width:310px;
+  height:30px;
   border:1px solid #333;
   border-radius:10px;
   display:inline;
 }
 
-// .loginButton{
-//   display: inline;
-// }
-// ---------------
-
-
-button {
-  display: inline-block;
-  @include box-sizing(content-box);
-  cursor: pointer;
-  padding: 0 20px;
-  border: none;
-  @include border-radius(20px);
-  font: normal normal bold 20px/40px "Baumans", Helvetica, sans-serif;
-  color: black;
-  -o-text-overflow: clip;
-  text-overflow: clip;
-  @include background(rgb(221, 221, 221));
-  @include box-shadow(0 1px 0 0 rgb(119,119,119) , 0 2px 0 0 rgb(119,119,119) , 0 3px 0 0 rgb(119,119,119) , 0 4px 0 0 rgb(119,119,119) , 0 5px 0 0 rgb(119,119,119) , 0 6px 0 0 rgb(119,119,119) , 0 0 5px 0 rgba(0,0,0,0.0980392) , 0 1px 3px 0 rgba(0,0,0,0.298039) , 0 3px 5px 0 rgba(0,0,0,0.2) , 0 5px 10px 0 rgba(0,0,0,0.247059) , 0 10px 10px 0 rgba(0,0,0,0.2) , 0 20px 20px 0 rgba(0,0,0,0.14902) );
-  @include text-shadow(0 1px 0 #FFFFFF );
+.loginButton{
+  display: inline;
 }
 
 
-button:hover {
-  @include background(#FFFFFF);
-}
 
 
-button:active {
-  margin: 6px 0 0;
-  @include background(rgb(221, 221, 221));
-  @include box-shadow(0 -1px 10px 0 rgba(0,0,0,0.247059) , 0 4px 10px 0 rgba(0,0,0,0.2) , 0 14px 20px 0 rgba(0,0,0,0.14902) );
-}
-
-
-button:focus {
-  @include background(rgb(221, 221, 221));
-}

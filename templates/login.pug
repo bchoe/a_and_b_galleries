@@ -5,10 +5,14 @@ block title
 block body
   div.inputBodyHolder
     div.newInputBody
-      h1 Log In
-      form(method="POST" action="/login")
-        input(type="text" name="username" placeholder="username")
-        input(type="password" name="password" placeholder="password")
-        button(type="submit") Login
-        a(href="/logout")
-          button Logout
+      div.formDiv
+        h1 Log In
+        form(method="POST" action="/login")
+          input.loginUser(type="text" name="username" placeholder="username")
+          br
+          input.loginPassword(type="password" name="password" placeholder="password")
+          br
+          button.loginButton(type="submit") Login
+          br
+          a.logoutButton(href="/logout")
+            button Logout
