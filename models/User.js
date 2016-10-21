@@ -6,10 +6,25 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        User.hasMany(models.Photo);
+
       }
     }
   });
 
   return User;
 };
+
+
+//    associate: function(models) {
+//         User.hasMany(models.Photo,{
+//           foreignKey:{
+//             name:'uid',
+//             allowNull:false
+//           }
+//         });
+//       }
+//     }
+//   });
+
+//   return User;
+// };
