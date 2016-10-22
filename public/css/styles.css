@@ -1,49 +1,75 @@
 /* line 3, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 body {
   background: #FFF;
-  font-family: 'Kaushan Script', cursive; }
+  font-family: 'Kaushan Script', cursive;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white; }
 
-/* line 9, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
-.userGallery {
+/* line 15, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+.navBar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; }
+
+/* line 21, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+.addPhotoButton {
+  flex-grow: 1; }
+
+/* line 25, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+.myPhotoButton {
+  flex-grow: 1; }
+
+/* line 29, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+.galleryButton {
+  border-color: lightgray;
+  width: 200px; }
+
+/* line 34, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+.logOutDiv {
+  flex-grow: 2;
+  text-align: right; }
+
+/* line 39, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+.userGallery, .userEditGallery {
   display: flex;
   flex-flow: row wrap; }
 
-/* line 18, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+/* line 44, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+.userBorder {
+  background-color: transparent;
+  flex-grow: 1; }
+
+/* line 49, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .titleDiv {
   text-align: center; }
 
-/* line 22, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+/* line 53, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 #featuredPicture {
-  display: flex;
-  justify-content: center;
-  width: 1200px;
-  height: auto; }
-  /* line 27, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
-  #featuredPicture .mainPic {
-    height: auto;
-    width: 1200px;
-    text-align: center; }
+  text-align: center;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: -9px; }
 
-/* line 35, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+/* line 61, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+.mainPic {
+  width: 900px;
+  text-align: center; }
+
+/* line 67, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .inputBodyHolder {
   background-position: top;
   display: flex;
   justify-content: center;
   background-repeat: no-repeat;
-  background-image: url(http://www.desktopimages.org/preview/get_photo/73659/1280/800);
+  background-image: url("/css/hipstercamera1.jpg");
   background-size: cover;
   min-width: 100%;
   min-height: 100%; }
 
-/* line 46, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
-.loginUser, .loginPassword {
-  font-size: 20px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  width: 300px;
-  height: 35px; }
-
-/* line 54, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+/* line 81, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .newInputBody {
   margin: 200px 200px 300px 300px;
   width: 900px;
@@ -52,119 +78,137 @@ body {
   align-items: center;
   justify-content: center; }
 
-/* line 63, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
-.formDiv {
+/* line 90, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+.formDiv, .createFormDiv {
   text-align: center;
   border-radius: 25px;
   background-color: gray;
   background: rgba(255, 255, 255, 0.5);
-  height: 470px;
+  height: 1130px;
   width: auto;
-  margin-right: 300px;
-  margin-bottom: 200px;
-  padding-top: 4px; }
+  margin-right: 900px; }
 
-/* line 75, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+/* line 100, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+.loginDiv, .addPhotoDiv {
+  padding-top: 300px; }
+
+/* line 104, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .editForm {
   height: 600px;
   text-align: center; }
 
-/* line 80, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
-.editAuthor, .editLink, .editDescription {
+/* line 109, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+.loginUser, .loginPassword, .editAuthor, .editLink, .editDescription {
+  font-size: 20px;
+  border-radius: 10px;
+  margin-bottom: 35px;
+  width: 300px;
+  height: 35px;
   width: 200px;
   background-color: lightgray; }
 
-/* line 85, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
-.editAuthor:hover, .editLink:hover, .editDescription:hover {
+/* line 124, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+.loginUser:hover, .loginPassword:hover {
   width: 300px;
   background-color: white; }
 
-/* line 90, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+/* line 130, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .editPic {
   width: 30%;
   height: 30%; }
 
-/* line 95, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+/* line 135, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .user {
-  filter: grayscale(100%); }
+  width: 413px;
+  transition: all 0.3s;
+  flex-grow: 1 2; }
 
-/* line 99, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+/* line 141, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .user:hover {
-  filter: grayscale(0%); }
-
-/* line 104, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
-.userBorder {
-  margin: 2px;
-  background: gray;
-  background: rgba(255, 255, 255, 0.5); }
-
-/* line 111, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
-img {
-  flex: 0 0 30%;
-  width: 430px;
-  height: auto;
-  vertical-align: center; }
-
-/* line 117, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
-img:hover {
+  filter: grayscale(100%);
   transform: scale(1.1); }
 
-/* line 122, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+/* line 146, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+.authorTagDiv {
+  display: flex;
+  flex-flow: row wrap;
+  width: 413px; }
+
+/* line 152, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+.authorPicTag {
+  align-self: flex-start;
+  flex-grow: 1; }
+
+/* line 156, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+.spacer {
+  width: 100px;
+  flex-grow: 2; }
+
+/* line 160, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+.profilePic {
+  align-self: flex-end;
+  margin-right: 0px;
+  width: 50px;
+  height: 50px;
+  background-color: green;
+  flex-grow: 1;
+  overflow: hidden;
+  text-align: right;
+  background: transparent; }
+
+/* line 172, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+.usersFaceNavBar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%; }
+
+/* line 178, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+.outerUserpictureBorder {
+  width: 413px;
+  background-color: rgba(216, 214, 214, 0.27); }
+
+/* line 184, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+.usersFace {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; }
+
+/* line 190, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+.userPictureBorder {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  width: 413px; }
+
+/* line 197, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 h1 {
   text-align: center;
   color: black;
   font-size: 70px; }
 
-/* line 128, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+/* line 203, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 h2 {
   color: black;
   font-size: 70px;
   display: flex;
   justify-content: center; }
 
-/* line 135, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
-button {
+/* line 210, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+button, button:link, button:visited {
+  text-decoration: none;
   margin-bottom: 20px;
   background: white;
-  width: 310px;
-  height: 30px;
+  width: 300px;
+  height: 35px;
   border: 1px solid #333;
   border-radius: 10px;
-  display: inline; }
+  display: inline;
+  border-color: transparent;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  background: transparent; }
 
-/* line 145, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+/* line 228, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .loginButton {
   display: inline; }
-
-/* line 149, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
-.creatFormDiv {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  width: 100px;
-  height: 100px;
-  border: 2px solid rgba(0, 150, 255, 0.91);
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  font: normal 16px/1 "Times New Roman", Times, serif;
-  color: white;
-  text-align: center;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  background: rgba(0, 150, 255, 0.91);
-  -webkit-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1) 38ms, background-position 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -moz-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1) 38ms, background-position 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -o-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1) 38ms, background-position 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1) 38ms, background-position 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -webkit-transform: rotateX(1.14592deg) rotateY(77.3493deg) rotateZ(-97.40283deg);
-  transform: rotateX(1.14592deg) rotateY(77.3493deg) rotateZ(-97.40283deg); }
-
-/* line 172, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
-.createFormDiv:hover {
-  margin: 0 0 0 184px;
-  -webkit-transition: margin 320ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -moz-transition: margin 320ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -o-transition: margin 320ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  transition: margin 320ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -webkit-transform: none;
-  transform: none; }

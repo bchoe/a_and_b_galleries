@@ -6,17 +6,18 @@ block body
   div.inputBodyHolder
     div.newInputBody
       div.formDiv
-        h1 Log In
-        form(method="POST" action="/")
-          input.loginUser(type="text" name="username" placeholder="username")
-          br
-          input.loginPassword(type="password" name="password" placeholder="password")
-          br
-          button.loginButton(type="submit") Login
-          br
-          a.logoutButton(href="/logout")
-            button Logout
+        div.loginDiv
+          form(method="POST" action="/")
+            h1 Log In
+            input.loginUser(type="text" name="username" placeholder="username")
             br
-        a.logoutButton(href="/create")
-          button Sign Up
+            input.loginPassword(type="password" name="password" placeholder="password")
+            br
+            button.loginButton(type="submit") Login
+            br
+            a.logoutButton(href="/logout")
+              button Logout
+              br
+          a.logoutButton(href="/create")
+            button Sign Up
 
