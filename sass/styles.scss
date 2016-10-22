@@ -11,25 +11,36 @@ background-color: white;
 
 }
 
+
 .navBar{
   display: flex;
-  flex-flow: row wrap;
-  border: solid 1px;
-  border-color: lightgrey;
-  border-radius: 10px;
+  flex-direction: row ;
+  flex-wrap: nowrap;
+}
+
+.addPhotoButton{
+  flex-grow:1;
+}
+
+.myPhotoButton{
+  flex-grow:1;
 }
 
 .galleryButton{
+border-color: lightgray;
+width:200px;
+}
 
-}
 .logOutDiv{
-  width:200px;
-  padding-left: 300px;
+  flex-grow:2;
+  text-align: right;
 }
+
 .userGallery, .userEditGallery{
   display:flex;
   flex-flow:row wrap;
 }
+
 .userBorder{
   background-color: transparent;
    flex-grow: 1;
@@ -66,13 +77,6 @@ background-color: white;
 
 }
 
-.loginUser, .loginPassword{
-  font-size: 20px;
-  border-radius: 10px;
-  margin-bottom: 35px;
-  width:300px;
-  height:35px;
-}
 
 .newInputBody{
   margin:200px 200px 300px 300px;
@@ -102,12 +106,23 @@ margin-right:900px;
   text-align: center;
 }
 
-.editAuthor, .editLink, .editDescription{
-width: 200px;
+.loginUser, .loginPassword, .editAuthor, .editLink, .editDescription{
+  font-size: 20px;
+  border-radius: 10px;
+  margin-bottom: 35px;
+  width:300px;
+  height:35px;
+  width: 200px;
 background-color: lightgray;
 }
 
-.editAuthor:hover, .editLink:hover, .editDescription:hover{
+// .editAuthor, .editLink, .editDescription{
+// width: 200px;
+// background-color: lightgray;
+// }
+
+.loginUser:hover, .loginPassword:hover{
+
 width: 300px;
 background-color: white;
 }
@@ -118,7 +133,7 @@ background-color: white;
 }
 
 .user{
-  width:410px;
+  width:413px;
   transition: all 0.3s;
    flex-grow: 1 2;
  }
@@ -128,12 +143,55 @@ background-color: white;
   transform: scale(1.1);
 }
 
+.authorTagDiv{
+  display:flex;
+  flex-flow:row wrap;
+  width: 413px;
+}
+
+.authorPicTag{
+  align-self: flex-start;
+  flex-grow:1
+}
+.spacer{
+  width:100px;
+  flex-grow:2;
+}
+.profilePic{
+  align-self: flex-end;
+  margin-right:0px;
+  width:50px;
+  height:50px;
+  background-color: green;
+  flex-grow:1;
+  overflow: hidden;
+  text-align: right;
+  background: transparent;
+}
+
+.usersFaceNavBar{
+   width:70px;
+  height:70px;
+  border-radius: 50%;
+}
+
+.outerUserpictureBorder{
+  width: 413px;
+  background-color: rgba(216, 214, 214, 0.27);
+
+}
+
+.usersFace{
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+}
 
 .userPictureBorder{
   text-align: center;
   position: relative;
   overflow: hidden;
-  width: 410px;
+  width: 413px;
 }
 
 h1{
@@ -149,7 +207,8 @@ h2{
   justify-content: center;
 }
 
-button{
+button, button:link, button:visited{
+  text-decoration: none;
   margin-bottom: 20px;
   background: white;
   width:300px;
@@ -163,6 +222,8 @@ button{
   color:black;
   background: transparent;
 }
+
+
 
 .loginButton{
 

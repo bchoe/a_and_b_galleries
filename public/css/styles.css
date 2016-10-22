@@ -8,46 +8,57 @@ body {
   height: 100%;
   background-color: white; }
 
-/* line 14, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 15, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .navBar {
   display: flex;
-  flex-flow: row wrap;
-  border: solid 1px;
-  border-color: lightgrey;
-  border-radius: 10px; }
+  flex-direction: row;
+  flex-wrap: nowrap; }
+
+/* line 21, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+.addPhotoButton {
+  flex-grow: 1; }
 
 /* line 25, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
-.logOutDiv {
-  width: 200px;
-  padding-left: 300px; }
+.myPhotoButton {
+  flex-grow: 1; }
 
 /* line 29, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+.galleryButton {
+  border-color: lightgray;
+  width: 200px; }
+
+/* line 34, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+.logOutDiv {
+  flex-grow: 2;
+  text-align: right; }
+
+/* line 39, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .userGallery, .userEditGallery {
   display: flex;
   flex-flow: row wrap; }
 
-/* line 33, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 44, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .userBorder {
   background-color: transparent;
   flex-grow: 1; }
 
-/* line 38, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 49, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .titleDiv {
   text-align: center; }
 
-/* line 42, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 53, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 #featuredPicture {
   text-align: center;
   margin-left: 0px;
   margin-right: 0px;
   margin-bottom: -9px; }
 
-/* line 50, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 61, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .mainPic {
   width: 900px;
   text-align: center; }
 
-/* line 56, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 67, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .inputBodyHolder {
   background-position: top;
   display: flex;
@@ -58,15 +69,7 @@ body {
   min-width: 100%;
   min-height: 100%; }
 
-/* line 69, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
-.loginUser, .loginPassword {
-  font-size: 20px;
-  border-radius: 10px;
-  margin-bottom: 35px;
-  width: 300px;
-  height: 35px; }
-
-/* line 77, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 81, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .newInputBody {
   margin: 200px 200px 300px 300px;
   width: 900px;
@@ -75,7 +78,7 @@ body {
   align-items: center;
   justify-content: center; }
 
-/* line 86, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 90, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .formDiv, .createFormDiv {
   text-align: center;
   border-radius: 25px;
@@ -85,63 +88,114 @@ body {
   width: auto;
   margin-right: 900px; }
 
-/* line 96, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 100, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .loginDiv, .addPhotoDiv {
   padding-top: 300px; }
 
-/* line 100, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 104, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .editForm {
   height: 600px;
   text-align: center; }
 
-/* line 105, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
-.editAuthor, .editLink, .editDescription {
+/* line 109, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+.loginUser, .loginPassword, .editAuthor, .editLink, .editDescription {
+  font-size: 20px;
+  border-radius: 10px;
+  margin-bottom: 35px;
+  width: 300px;
+  height: 35px;
   width: 200px;
   background-color: lightgray; }
 
-/* line 110, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
-.editAuthor:hover, .editLink:hover, .editDescription:hover {
+/* line 124, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+.loginUser:hover, .loginPassword:hover {
   width: 300px;
   background-color: white; }
 
-/* line 115, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 130, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .editPic {
   width: 30%;
   height: 30%; }
 
-/* line 120, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 135, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .user {
-  width: 410px;
+  width: 413px;
   transition: all 0.3s;
   flex-grow: 1 2; }
 
-/* line 126, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 141, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .user:hover {
   filter: grayscale(100%);
   transform: scale(1.1); }
 
-/* line 132, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 146, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+.authorTagDiv {
+  display: flex;
+  flex-flow: row wrap;
+  width: 413px; }
+
+/* line 152, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+.authorPicTag {
+  align-self: flex-start;
+  flex-grow: 1; }
+
+/* line 156, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+.spacer {
+  width: 100px;
+  flex-grow: 2; }
+
+/* line 160, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+.profilePic {
+  align-self: flex-end;
+  margin-right: 0px;
+  width: 50px;
+  height: 50px;
+  background-color: green;
+  flex-grow: 1;
+  overflow: hidden;
+  text-align: right;
+  background: transparent; }
+
+/* line 172, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+.usersFaceNavBar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%; }
+
+/* line 178, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+.outerUserpictureBorder {
+  width: 413px;
+  background-color: rgba(216, 214, 214, 0.27); }
+
+/* line 184, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+.usersFace {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; }
+
+/* line 190, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .userPictureBorder {
   text-align: center;
   position: relative;
   overflow: hidden;
-  width: 410px; }
+  width: 413px; }
 
-/* line 139, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 197, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 h1 {
   text-align: center;
   color: black;
   font-size: 70px; }
 
-/* line 145, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 203, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 h2 {
   color: black;
   font-size: 70px;
   display: flex;
   justify-content: center; }
 
-/* line 152, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
-button {
+/* line 210, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+button, button:link, button:visited {
+  text-decoration: none;
   margin-bottom: 20px;
   background: white;
   width: 300px;
@@ -155,6 +209,6 @@ button {
   color: black;
   background: transparent; }
 
-/* line 167, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 228, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .loginButton {
   display: inline; }

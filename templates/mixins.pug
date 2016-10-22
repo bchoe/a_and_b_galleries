@@ -2,11 +2,18 @@ mixin userGalleryList(users)
   div
   each User in users
     div.userBorder
-      div.userPictureBorder
-        img.user(src=User.link)
-      div.picTag= User.author
-      div.picTag= User.description
-    br
+
+      div.outerUserpictureBorder
+
+        div.userPictureBorder
+          img.user(src=User.link)
+        div.authorTagDiv
+          div.authorPicTag= User.author
+          div.spacer
+          div.profilePic
+            img.usersFace(src=one.link)
+        div.picTag= User.description
+      br
 mixin editGalleryList(photos)
   div
   each photo in photos

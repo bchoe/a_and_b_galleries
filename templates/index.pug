@@ -8,12 +8,14 @@ block body
     div.addPhotoButton
       button.galleryButton
         a(href="/gallery/new") Add Photo
-    div.myPhotoButton
-      button.galleryButton
-        a(href="/gallery/myPhotos") My Photos
+      div.myPhotoButton
+        button.galleryButton
+          a(href="/gallery/myPhotos") My Photos
     div.logOutDiv
       button.galleryButton
         a(href="/logout") Logout
+      div
+        img.usersFaceNavBar(src=one.link)
   div.titleDiv
     h1 Gallery
     div#featuredPicture
