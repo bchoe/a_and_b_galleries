@@ -7,8 +7,7 @@ block body
     h1 A and B Galleries
     div#featuredPictureEdit
       img.editPic(src=data.link)
-
-    form.editForm(action='#' method='post')
+    form.editForm(action=`/gallery/${photoId}` method='POST')
       p author
       p #{edit}
       input.editAuthor(name="author" placeholder= data.author)
@@ -17,13 +16,14 @@ block body
       p description
       input.editDescription(name="description" placeholder= data.description)
       br
-      button.button POST
-        a(href="/gallery")
-        button
-          a(href="/gallery/new") Add a photo
-
-      form(method="POST" action='/gallery/#{data.id}' enctype="application/x-www-form-urlencoded")
-        input(type="hidden" name="_method" value="DELETE")
-        button(type="submit") Delete
+      input(type="hidden" name="_method" value="PUT")
+      button(type="submit") Submit Edit
+    button.button
+      a(href="/gallery") Home
+    button.button
+      a(href="/logout") Logout
+    form(method="POST" action=`/gallery/${id}` enctype="application/x-www-form-urlencoded")
+      input(type="hidden" name="_method" value="DELETE")
+      button(type="submit") Delete
 
 
