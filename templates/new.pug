@@ -1,7 +1,7 @@
 extends ./layout.pug
 include ./mixins.pug
 block title
-  title Edit
+  title New
 
 block body
   div.inputBodyHolder
@@ -11,15 +11,13 @@ block body
         form.editForm(action='#' method='post')
           p author
           p #{edit}
-          input.editAuthor(name="name")
+          input.editAuthor(name="author")
           p link
           input.editLink(name="link")
           p description
-          input.editDescription(name="inventory")
+          input.editDescription(name="description")
           br
           button.button POST
           br
-          //- button
-          //-   a(href="/articles/new") Add an Article
           button
             a(href="/gallery") HOME

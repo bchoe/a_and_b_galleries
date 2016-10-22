@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/bchoe/a_and_b_galleries#readme",
   "dependencies": {
+    "bcrypt": "^0.8.7",
     "body-parser": "^1.15.2",
     "connect-redis": "^3.1.0",
     "express": "^4.14.0",

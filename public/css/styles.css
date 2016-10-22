@@ -1,41 +1,41 @@
-/* line 3, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 3, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 body {
   background: #FFF;
   font-family: 'Kaushan Script', cursive; }
 
-/* line 11, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 9, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .userGallery {
   display: flex;
   flex-flow: row wrap; }
 
-/* line 21, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 18, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .titleDiv {
   text-align: center; }
 
-/* line 25, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 22, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 #featuredPicture {
   display: flex;
   justify-content: center;
-  width: 1200px; }
-  /* line 30, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+  width: 1200px;
+  height: auto; }
+  /* line 27, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
   #featuredPicture .mainPic {
     height: auto;
-    width: 90%;
+    width: 1200px;
     text-align: center; }
 
-/* line 38, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 35, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .inputBodyHolder {
+  background-position: top;
   display: flex;
   justify-content: center;
-  background-image: url("http://www.desktopimages.org/preview/get_photo/73659/1280/800");
-  position: fixed;
-  top: 0;
-  left: 0;
-  /* Preserve aspet ratio */
+  background-repeat: no-repeat;
+  background-image: url(http://www.desktopimages.org/preview/get_photo/73659/1280/800);
+  background-size: cover;
   min-width: 100%;
   min-height: 100%; }
 
-/* line 67, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 46, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .loginUser, .loginPassword {
   font-size: 20px;
   border-radius: 10px;
@@ -43,7 +43,7 @@ body {
   width: 300px;
   height: 35px; }
 
-/* line 77, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 54, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .newInputBody {
   margin: 200px 200px 300px 300px;
   width: 900px;
@@ -52,7 +52,7 @@ body {
   align-items: center;
   justify-content: center; }
 
-/* line 86, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 63, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .formDiv {
   text-align: center;
   border-radius: 25px;
@@ -64,61 +64,65 @@ body {
   margin-bottom: 200px;
   padding-top: 4px; }
 
-/* line 111, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 75, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .editForm {
   height: 600px;
   text-align: center; }
 
-/* line 118, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 80, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .editAuthor, .editLink, .editDescription {
   width: 200px;
   background-color: lightgray; }
 
-/* line 123, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 85, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .editAuthor:hover, .editLink:hover, .editDescription:hover {
   width: 300px;
   background-color: white; }
 
-/* line 128, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 90, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .editPic {
   width: 30%;
   height: 30%; }
 
-/* line 133, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 95, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .user {
-  filter: grayscale(100%) blur(2px); }
+  filter: grayscale(100%); }
 
-/* line 138, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 99, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .user:hover {
   filter: grayscale(0%); }
 
-/* line 143, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 104, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .userBorder {
-  background-color: black;
-  padding: 10px;
-  margin: 15px; }
+  margin: 2px;
+  background: gray;
+  background: rgba(255, 255, 255, 0.5); }
 
-/* line 149, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 111, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 img {
   flex: 0 0 30%;
-  width: 400px;
+  width: 430px;
   height: auto;
   vertical-align: center; }
 
-/* line 160, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 117, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
+img:hover {
+  transform: scale(1.1); }
+
+/* line 122, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 h1 {
   text-align: center;
   color: black;
   font-size: 70px; }
 
-/* line 170, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 128, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 h2 {
   color: black;
   font-size: 70px;
   display: flex;
   justify-content: center; }
 
-/* line 178, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 135, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 button {
   margin-bottom: 20px;
   background: white;
@@ -128,11 +132,11 @@ button {
   border-radius: 10px;
   display: inline; }
 
-/* line 188, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 145, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .loginButton {
   display: inline; }
 
-/* line 195, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 149, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .creatFormDiv {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -148,19 +152,19 @@ button {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   background: rgba(0, 150, 255, 0.91);
-  -webkit-transition: margin 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -moz-transition: margin 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -o-transition: margin 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  transition: margin 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -webkit-transform: rotateX(33.23155deg) rotateY(-57.29578deg) rotateZ(449.77187deg);
-  transform: rotateX(33.23155deg) rotateY(-57.29578deg) rotateZ(449.77187deg); }
+  -webkit-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1) 38ms, background-position 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -moz-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1) 38ms, background-position 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -o-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1) 38ms, background-position 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1) 38ms, background-position 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -webkit-transform: rotateX(1.14592deg) rotateY(77.3493deg) rotateZ(-97.40283deg);
+  transform: rotateX(1.14592deg) rotateY(77.3493deg) rotateZ(-97.40283deg); }
 
-/* line 218, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 172, /Users/bryanchoe/Desktop/devLeague/a_and_b_galleries/sass/styles.scss */
 .createFormDiv:hover {
   margin: 0 0 0 184px;
   -webkit-transition: margin 320ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
   -moz-transition: margin 320ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
   -o-transition: margin 320ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
   transition: margin 320ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -webkit-transform: rotateX(-17.18873deg) rotateY(1.71887deg);
-  transform: rotateX(-17.18873deg) rotateY(1.71887deg); }
+  -webkit-transform: none;
+  transform: none; }
