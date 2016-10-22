@@ -1,49 +1,72 @@
 /* line 3, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 body {
   background: #FFF;
-  font-family: 'Kaushan Script', cursive; }
+  font-family: 'Kaushan Script', cursive;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white; }
 
-/* line 9, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
-.userGallery {
+/* line 14, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+.navBar {
+  display: flex;
+  flex-flow: row wrap;
+  border: solid 1px;
+  border-color: lightgrey;
+  border-radius: 10px; }
+
+/* line 25, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+.logOutDiv {
+  width: 200px;
+  padding-left: 300px; }
+
+/* line 29, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+.userGallery, .userEditGallery {
   display: flex;
   flex-flow: row wrap; }
 
-/* line 18, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 33, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+.userBorder {
+  background-color: transparent;
+  flex-grow: 1; }
+
+/* line 38, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .titleDiv {
   text-align: center; }
 
-/* line 22, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 42, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 #featuredPicture {
-  display: flex;
-  justify-content: center;
-  width: 1200px;
-  height: auto; }
-  /* line 27, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
-  #featuredPicture .mainPic {
-    height: auto;
-    width: 1200px;
-    text-align: center; }
+  text-align: center;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: -9px; }
 
-/* line 35, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 50, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+.mainPic {
+  width: 900px;
+  text-align: center; }
+
+/* line 56, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .inputBodyHolder {
   background-position: top;
   display: flex;
   justify-content: center;
   background-repeat: no-repeat;
-  background-image: url("http://www.desktopimages.org/preview/get_photo/73659/1280/800");
+  background-image: url("/css/hipstercamera1.jpg");
   background-size: cover;
   min-width: 100%;
   min-height: 100%; }
 
-/* line 48, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 69, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .loginUser, .loginPassword {
   font-size: 20px;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 35px;
   width: 300px;
   height: 35px; }
 
-/* line 56, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 77, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .newInputBody {
   margin: 200px 200px 300px 300px;
   width: 900px;
@@ -52,119 +75,86 @@ body {
   align-items: center;
   justify-content: center; }
 
-/* line 65, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
-.formDiv {
+/* line 86, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+.formDiv, .createFormDiv {
   text-align: center;
   border-radius: 25px;
   background-color: gray;
   background: rgba(255, 255, 255, 0.5);
-  height: 470px;
+  height: 1130px;
   width: auto;
-  margin-right: 300px;
-  margin-bottom: 200px;
-  padding-top: 4px; }
+  margin-right: 900px; }
 
-/* line 77, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 96, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+.loginDiv, .addPhotoDiv {
+  padding-top: 300px; }
+
+/* line 100, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .editForm {
   height: 600px;
   text-align: center; }
 
-/* line 82, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 105, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .editAuthor, .editLink, .editDescription {
   width: 200px;
   background-color: lightgray; }
 
-/* line 87, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 110, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .editAuthor:hover, .editLink:hover, .editDescription:hover {
   width: 300px;
   background-color: white; }
 
-/* line 92, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 115, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .editPic {
   width: 30%;
   height: 30%; }
 
-/* line 97, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 120, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .user {
-  filter: grayscale(100%); }
+  width: 410px;
+  transition: all 0.3s;
+  flex-grow: 1 2; }
 
-/* line 101, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 126, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .user:hover {
-  filter: grayscale(0%); }
-
-/* line 106, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
-.userBorder {
-  margin: 2px;
-  background: gray;
-  background: rgba(255, 255, 255, 0.5); }
-
-/* line 113, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
-img {
-  flex: 0 0 30%;
-  width: 430px;
-  height: auto;
-  vertical-align: center; }
-
-/* line 119, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
-img:hover {
+  filter: grayscale(100%);
   transform: scale(1.1); }
 
-/* line 124, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 132, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+.userPictureBorder {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  width: 410px; }
+
+/* line 139, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 h1 {
   text-align: center;
   color: black;
   font-size: 70px; }
 
-/* line 130, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 145, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 h2 {
   color: black;
   font-size: 70px;
   display: flex;
   justify-content: center; }
 
-/* line 137, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 152, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 button {
   margin-bottom: 20px;
   background: white;
-  width: 310px;
-  height: 30px;
+  width: 300px;
+  height: 35px;
   border: 1px solid #333;
   border-radius: 10px;
-  display: inline; }
+  display: inline;
+  border-color: transparent;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  background: transparent; }
 
-/* line 147, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
+/* line 167, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
 .loginButton {
   display: inline; }
-
-/* line 151, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
-.creatFormDiv {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  width: 100px;
-  height: 100px;
-  border: 2px solid rgba(0, 150, 255, 0.91);
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  font: normal 16px/1 "Times New Roman", Times, serif;
-  color: white;
-  text-align: center;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  background: rgba(0, 150, 255, 0.91);
-  -webkit-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1) 38ms, background-position 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -moz-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1) 38ms, background-position 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -o-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1) 38ms, background-position 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1) 38ms, background-position 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -webkit-transform: rotateX(1.14592deg) rotateY(77.3493deg) rotateZ(-97.40283deg);
-  transform: rotateX(1.14592deg) rotateY(77.3493deg) rotateZ(-97.40283deg); }
-
-/* line 174, /Users/aaronarakawa/Desktop/DevLeague/a_and_b_galleries/sass/styles.scss */
-.createFormDiv:hover {
-  margin: 0 0 0 184px;
-  -webkit-transition: margin 320ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -moz-transition: margin 320ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -o-transition: margin 320ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  transition: margin 320ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -webkit-transform: none;
-  transform: none; }

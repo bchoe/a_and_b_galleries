@@ -7,17 +7,18 @@ block body
   div.inputBodyHolder
     div.newInputBody
       div.formDiv
-        h1 Add photo
-        form.editForm(action='#' method='post')
-          p author
-          p #{edit}
-          input.editAuthor(name="author")
-          p link
-          input.editLink(name="link")
-          p description
-          input.editDescription(name="description")
-          br
-          button.button POST
-          br
-          button
-            a(href="/gallery") HOME
+        div.addPhotoDiv
+          form.editForm(action='#' method='post')
+            h1 Add photo
+            p author
+            p #{edit}
+            input.editAuthor(name="author")
+            p link
+            input.editLink(name="link")
+            p description
+            input.editDescription(name="description")
+            br
+            button.button POST
+            br
+            button
+              a(href="/gallery") HOME

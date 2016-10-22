@@ -245,19 +245,20 @@ app.get('/create', (req,res) => {
 
 app.post('/create', (req,res) => {
   bcrypt.genSalt(saltRounds, (err, salt) => {
-  console.log("salt",salt)
-  bcrypt.hash( req.body.password, salt, (err, hash) => {
-  User.create({
-    username: req.body.username,
-    password: hash
+    console.log("salt",salt)
+    bcrypt.hash( req.body.password, salt, (err, hash) => {
+      User.create({
+        username: req.body.username,
+        password: hash
+      })
+      .then((data) => {
+      })
+      .catch((err) => {
+        console.error('error');
+      });
+    });
   })
-  .then((data) => {
-  })
-  .catch((err) => {
-    console.error('error');
-  });
-});
-    })
+  res.redirect('/');
 })
 
 app.get('/gallery', isAuthenticated, (req,res) => {

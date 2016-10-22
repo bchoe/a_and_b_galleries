@@ -3,9 +3,17 @@ include ./mixins.pug
 block title
   title myPhotos
 block body
+  div.navBar
+    div.addPhotoButton
+      button.galleryButton
+        a(href="/gallery/new") Add Photo
+    div.homeButtonDiv
+      button.button
+      a(href="/gallery") Home
+    div.logOutDiv
+      button.galleryButton
+        a(href="/logout") Logout
   div.titleDiv
     h1 A and B Galleries
-    button.button
-      a(href="/gallery") Home
     div.userEditGallery
       +editGalleryList(userPhotos)
