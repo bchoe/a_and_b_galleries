@@ -1,0 +1,11 @@
+extends ./layout.pug
+include ./mixins.pug
+block title
+  title myPhotos
+block body
+  div.titleDiv
+    h1 A and B Galleries
+    button.button
+      a(href="/gallery") Home
+    div.userEditGallery
+      +editGalleryList(userPhotos)

@@ -1,2 +1,6 @@
-const User = db.User;
-const Task = db.Task;
+const express =require('express');
+const gallery = express.Router();
+
+
+
+module.exports = gallery;

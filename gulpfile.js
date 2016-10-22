@@ -6,6 +6,7 @@ const nodemon     = require('gulp-nodemon');
 const browserSync = require('browser-sync');
 const reload      = browserSync.reload;
 const pkg         = require('./package.json');
+const childProcess = require('child_process');
 
 gulp.task('nodemon', function (cb) {
 
@@ -31,6 +32,15 @@ gulp.task('browser-sync', ['nodemon'], function() {
   });
 });
 
+gulp.task('redis-server', function() {
+  childProcess.exec('redis-server', function(err, stdout, stderr) {
+    console.log(stdout);
+    if (err !== null) {
+      console.log('exec error: ' + err);
+    }
+  });
+});
+
 gulp.task('sass', function () {
   return gulp.src('./sass/*.scss')
       .pipe(sass({
@@ -47,4 +57,4 @@ gulp.task('watch', function () {
   gulp.watch('./public/**/*.*').on('change', reload);
 });
 
-gulp.task('default', ['watch', 'sass', 'browser-sync']);
+gulp.task('default', ['redis-server','watch', 'sass', 'browser-sync']);

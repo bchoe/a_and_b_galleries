@@ -1,13 +1,13 @@
 extends ./layout.pug
 include ./mixins.pug
 block title
-  title Login
+  title A & B Galleries
 block body
   div.inputBodyHolder
     div.newInputBody
       div.formDiv
         h1 Log In
-        form(method="POST" action="/login")
+        form(method="POST" action="/")
           input.loginUser(type="text" name="username" placeholder="username")
           br
           input.loginPassword(type="password" name="password" placeholder="password")
