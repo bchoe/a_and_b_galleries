@@ -8,7 +8,7 @@ function owner(req,res,next){
       username: req.user.username
     }
   })
-  .then(user => {
+  .then(user => { 
     console.log('req user',req.user);
     Photo.findById(req.params.id)
       .then(photo => {
