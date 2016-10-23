@@ -1,18 +1,18 @@
-mixin userGalleryList(users)
+mixin userGalleryList(photos)
   div
-  each User in users
+  each photo in photos
     div.userBorder
 
       div.outerUserpictureBorder
 
         div.userPictureBorder
-          img.user(src=User.link)
+          img.user(src=photo.link)
         div.authorTagDiv
-          div.authorPicTag= User.author
+          div.authorPicTag= photo.author
           div.spacer
           div.profilePic
-            img.usersFace(src=one.link)
-        div.picTag= User.description
+            img.usersFace(src=photo.User.profilePicture)
+        div.picTag= photo.description
       br
 mixin editGalleryList(photos)
   div
