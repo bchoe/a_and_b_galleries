@@ -11,7 +11,8 @@ mixin userGalleryList(photos)
           div.authorPicTag= photo.author
           div.spacer
           div.profilePic
-            img.usersFace(src=photo.User.profilePicture)
+            a(href="/gallery/myPhotos")
+              img.usersFace(src=photo.User.profilePicture)
         div.picTag= photo.description
       br
 mixin editGalleryList(photos)
