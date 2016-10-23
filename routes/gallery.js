@@ -59,12 +59,14 @@ gallery.route('/create')
     res.render('create');
   })
   .post((req,res) => {
+    console.log("req.body",req.body)
     bcrypt.genSalt(saltRounds, (err, salt) => {
       console.log("salt",salt);
       bcrypt.hash( req.body.password, salt, (err, hash) => {
         User.create({
         username: req.body.username,
-        password: hash
+        password: hash,
+        profilePicture:req.body.profilePicture
         })
         .then((data) => {
           res.redirect('/success');
@@ -80,17 +82,42 @@ gallery.route('/create')
 //access to all users signed in
 gallery.route('/gallery')
   .get(validate.isAuthenticated,(req,res) => {
-  Photo.findAll()
-  .then((data) => {
-    let one = data.slice(data.length-1)[0];
+    Photo.findAll({
+    include: [User]
+  })
+  .then((photos)=>{
+
+    console.log(photos[0].dataValues)
+    console.log(photos[0].User.dataValues)
+
+    let one = photos.slice(photos.length-1)[0];
+
     res.render('index',{
-      data,
-      one
+      photos,
+      one,
+      profilePicture : req.user.profilePicture
     });
   })
-  .catch((err) => {
-    console.error('error');
+  .catch((err)=>{
+    console.error('error',err);
   });
+  // Photo.findAll()
+  // .then((data) => {
+  //  // console.log("DATA",data)
+  //   let one = data.slice(data.length-1)[0];
+  //   console.log("req.bot",req.user.profilePicture)
+  //   res.render('index',{
+  //     data,
+  //     one,
+  //     profilePicture : req.user.profilePicture
+
+  //   });
+
+  // })
+
+  // .catch((err) => {
+  //   console.error('error');
+  // });
 })
   .post((req,res) => {
     Photo.create({

@@ -15,12 +15,12 @@ block body
       button.galleryButton
         a(href="/logout") Logout
       div
-        img.usersFaceNavBar(src=one.link)
+        img.usersFaceNavBar(src=profilePicture)
   div.titleDiv
     h1 Gallery
     div#featuredPicture
       img.mainPic(src=one.link)
   div.userGallery
-    +userGalleryList(data)
+    +userGalleryList(photos)
 
 
