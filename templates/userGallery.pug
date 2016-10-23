@@ -6,14 +6,17 @@ block body
   div.navBar
     div.addPhotoButton
       button.galleryButton
-        a(href="/gallery/new") Add Photo
+        a(href="/gallery/new")
+          img.addGalleryButton(src='/css/add.jpg')
     div.homeButtonDiv
       button.button
-      a(href="/gallery") Home
+      a(href="/gallery")
+        img.addGalleryButton(src='/css/home.jpg')
     div.logOutDiv
       button.galleryButton
-        a(href="/logout") Logout
+        a(href="/logout")
+          img.addGalleryButton(src='/css/x.jpg')
   div.titleDiv
     h1 A and B Galleries
-    div.userEditGallery
-      +editGalleryList(userPhotos)
+      div.userEditGallery
+        +editGalleryList(userPhotos)

@@ -83,49 +83,31 @@ gallery.route('/create')
 gallery.route('/gallery')
   .get(validate.isAuthenticated,(req,res) => {
     Photo.findAll({
-    include: [User]
-  })
-  .then((photos)=>{
+      include: [User]
+    })
+    .then((photos)=>{
 
-    console.log(photos[0].dataValues)
-    console.log(photos[0].User.dataValues)
+      let one = photos.slice(photos.length-1)[0];
 
-    let one = photos.slice(photos.length-1)[0];
-
-    res.render('index',{
-      photos,
-      one,
-      profilePicture : req.user.profilePicture
+      res.render('index',{
+        photos,
+        one,
+        profilePicture : req.user.profilePicture
+      });
+    })
+    .catch((err)=>{
+      console.error('error',err);
     });
+
   })
-  .catch((err)=>{
-    console.error('error',err);
-  });
-  // Photo.findAll()
-  // .then((data) => {
-  //  // console.log("DATA",data)
-  //   let one = data.slice(data.length-1)[0];
-  //   console.log("req.bot",req.user.profilePicture)
-  //   res.render('index',{
-  //     data,
-  //     one,
-  //     profilePicture : req.user.profilePicture
-
-  //   });
-
-  // })
-
-  // .catch((err) => {
-  //   console.error('error');
-  // });
-})
   .post((req,res) => {
     Photo.create({
       author:req.body.author,
       link:req.body.link,
       description:req.body.description
     });
-});
+  })
+;
 
 //post new photo
 gallery.route('/gallery/new')

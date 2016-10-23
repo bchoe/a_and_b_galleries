@@ -1,23 +1,25 @@
 extends ./layout.pug
 include ./mixins.pug
 block title
-  title A and B galleries
+  title A & B galleries
 
 block body
   div.navBar
     div.addPhotoButton
+      button.addGalleryButton
+        a(href="/gallery/new")
+          img.addGalleryButton(src='/css/add.jpg')
+    div.myPhotoButton
       button.galleryButton
-        a(href="/gallery/new") Add Photo
-      div.myPhotoButton
-        button.galleryButton
-          a(href="/gallery/myPhotos") My Photos
+        a(href="/gallery/myPhotos") My Photos
     div.logOutDiv
-      button.galleryButton
-        a(href="/logout") Logout
-      div
+      a(href="/logout")
+        img.logoutGalleryButton(src='/css/x.jpg')
+  div.usersPicNavContainer
+    div.titleDiv
+      h1.title Gallery
+      a(href="/gallery/new")
         img.usersFaceNavBar(src=profilePicture)
-  div.titleDiv
-    h1 Gallery
     div#featuredPicture
       img.mainPic(src=one.link)
   div.userGallery
