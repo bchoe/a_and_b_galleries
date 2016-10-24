@@ -4,44 +4,44 @@ module.exports = {
   up: function (queryInterface, Sequelize) {
 
       return queryInterface.bulkInsert('Photos', [{
-        author: 'Hipster',
+        author: 'Bradah Ray Ray',
         link: 'http://i.imgur.com/xtcghTT.jpg',
-        description: 'not Drake',
+        description: 'Beautiful lake and mountains and trees',
         createdAt: new Date(),
         updatedAt: new Date(),
         userId: 1
       },{
-        author: 'Hawaii',
+        author: 'Joe Joe Binks',
         link: 'http://i.imgur.com/Xlo6xmZ.jpg',
-        description: 'Drake Lover',
+        description: 'Tropical rainforest in the middle of Kalihi Valley',
         createdAt: new Date(),
         updatedAt: new Date(),
         userId: 2
       },{
-        author: 'tmblr',
+        author: 'Aa-ron',
         link: 'http://i.imgur.com/xZumQxb.jpg',
-        description: 'Asian Hipster girl',
+        description: 'US side of Niagra Falls, beautiful view of toronto',
         createdAt: new Date(),
         updatedAt: new Date(),
         userId: 3
       },{
-        author: 'azn',
-        link: 'http://wall-papers.info/images/hd-travel-wallpapers/hd-travel-wallpapers-3.jpg',
-        description: 'My girl',
+        author: 'bbchoe',
+        link: 'http://tong.visitkorea.or.kr/img/vk/enu/cms/content/59/1976359_1_55.jpg',
+        description: 'Visit Korea during the winter time to snowboard and ski',
         createdAt: new Date(),
         updatedAt: new Date(),
         userId: 4
       },{
-        author: 'Aaron myspace',
+        author: 'Jaypee',
         link: 'http://www.hutui6.com/data/out/200/68563005-travel-wallpapers.jpg',
-        description: 'Drake',
+        description: 'Island resort secluded from all the bullshit',
         createdAt: new Date(),
         updatedAt: new Date(),
         userId: 5
       },{
-        author: 'Drake',
+        author: 'rcharzard',
         link: 'http://cdn.wallpapersafari.com/28/32/mEncpx.jpg',
-        description: 'Drake',
+        description: 'River walk during the evening time in a european town',
         createdAt: new Date(),
         updatedAt: new Date(),
         userId: 1

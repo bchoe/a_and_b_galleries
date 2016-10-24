@@ -3,6 +3,8 @@ include ./mixins.pug
 block title
   title Success
 block body
-  h1 Thank you for creating a new username! Please log back in
-  button.button
-    a(href="/") Log back in
+  div#successDiv
+    h1#successTitle Thank you for creating a new username, Please log back in!
+      button.button
+        a(href="/") Login
+      img.thumbsUp(src='/css/thumbsUp.jpg')

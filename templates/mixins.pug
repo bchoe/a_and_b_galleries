@@ -1,17 +1,14 @@
 mixin userGalleryList(photos)
-  div
   each photo in photos
     div.userBorder
-
       div.outerUserpictureBorder
-
         div.userPictureBorder
           img.user(src=photo.link)
         div.authorTagDiv
           div.authorPicTag= photo.author
           div.spacer
           div.profilePic
-            a(href="/gallery/myPhotos")
+            a.myPhotoDirect(href="/gallery/myPhotos")
               img.usersFace(src=photo.User.profilePicture)
         div.picTag= photo.description
       br
