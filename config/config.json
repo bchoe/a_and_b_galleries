@@ -1,4 +1,4 @@
-{
+mkdir{
   "development": {
     "username": "gallery_admin",
     "password": "1234",
@@ -14,11 +14,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
+    "username": "gallery_user",
+    "password": "password",
     "database": "database_production",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   },
   "secret": "hihdwiohiohiohgiosiodfjiosjfiosdifj"
 }
