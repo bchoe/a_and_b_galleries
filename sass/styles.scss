@@ -33,7 +33,6 @@ body {
   width: 100%;
   background-color: white;
   margin-top: 0px;
-
 }
 
 .addPhotoButton {
@@ -45,10 +44,6 @@ body {
 .myPhotoButton {
   border-color: green;
   flex-grow:1;
-}
-
-.logOutDiv {
-
 }
 
 .addGalleryButton {
@@ -66,10 +61,6 @@ a, a:visited, a:hover, a:focus {
   outline: 0;
   color:inherit;
   border: none;
-}
-
-.homeGalleryButton {
-
 }
 
 .logoutGalleryButton {
@@ -254,8 +245,6 @@ a, a:visited, a:hover, a:focus {
   height: 30%;
 }
 
-
-
 .authorTagDiv {
   display:flex;
   flex-flow:row wrap;
@@ -266,7 +255,6 @@ a, a:visited, a:hover, a:focus {
   align-self: flex-start;
   flex-grow:1
 }
-
 
 h1 {
   text-align: center;
